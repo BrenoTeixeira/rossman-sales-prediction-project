@@ -58,7 +58,7 @@ def predict(update, context):
     data = load_database(update, context)
     chat_id = update.effective_chat.id
     # Chamada na API
-    url = 'https://https://rossmann-api.onrender.com/rossman/predict'
+    url = 'https://brenoteixeira-rossmann-api-handler-73wgwz.streamlit.app/'
     header = {'Content-type': 'application/json'}
 
     if data != 'error':

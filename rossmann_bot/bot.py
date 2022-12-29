@@ -34,8 +34,8 @@ def load_database(update, context):
 
     if store_id != 'error':
 
-        df = pd.read_csv('DATA/test.csv')
-        store = pd.read_csv('DATA/store.csv')
+        df = pd.read_csv('../DATA/test.csv')
+        store = pd.read_csv('../DATA/store.csv')
 
         raw_data = pd.merge(df, store, how='left', on='Store')
 
@@ -96,8 +96,9 @@ if __name__ == '__main__':
     # dispatcher.add_handler(MessageHandler(Filters.text, get_prediction))
 
 
-    updater.start_webhook(listen='0.0.0.0',
+    updater.start_webhook(listen='127.0.0.1',
                           port=int(os.environ.get('PORT', 5000)),
                           url_path=telegram_bot_token,
-                          webhook_url = 'https://api.telegram.org/bot' + telegram_bot_token)
+                          webhook_url = 'https://rossmann-bot-mzgs.onrender.com/' + telegram_bot_token)
 
+    updater.idle()

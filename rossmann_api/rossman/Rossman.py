@@ -49,6 +49,7 @@ class Rossman(object):
               # competition_open_since_month
               df1.loc[df1['competition_open_since_year'].isnull(), 'competition_open_since_year'] = 0
               df1.loc[df1['competition_open_since_month'].isnull(), 'competition_open_since_month'] = 0
+              
               df1.loc[df1['promo2_since_week'].isnull(), 'promo2_since_week'] = 0
               df1.loc[df1['promo2_since_year'].isnull(), 'promo2_since_year'] = 0
 

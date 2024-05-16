@@ -1,3 +1,5 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](README.en.md)
+
 # ROSSMANN - PROJETO DE PREVISÃO DE VENDAS
 
 <img src = 'img/rossmann_img.jpg' />
@@ -92,25 +94,25 @@ PromoInterval | describes the consecutive intervals Promo2 is started, naming th
 
 **3.1. Variáveis Numéricas**
 
-    Min-Max-Scaler -> Utilizado em variáveis que não seguem um distribuição normal e não têm muitos outliers.
+- Min-Max-Scaler -> Utilizado em variáveis que não seguem um distribuição normal e não têm muitos outliers.
 
-    Robust Scaler -> Utilizado em variáveis que não seguem uma distribuição normal, com valores muito altos.
+- Robust Scaler -> Utilizado em variáveis que não seguem uma distribuição normal, com valores muito altos.
 
-    Log transformation -> Transformação utilizada na variável target para deixá-la com uma distribuição mais próxima da normal.
+- Log transformation -> Transformação utilizada na variável target para deixá-la com uma distribuição mais próxima da normal.
 
 **3.2. Variáveis Categóricas**
 
-    LabelEncoder -> Atribui um número a cada classe da variável.
+- LabelEncoder -> Atribui um número a cada classe da variável.
 
-    Ordinal Encoding -> Utilizado em variáveis que seguem uma ordem.
+- Ordinal Encoding -> Utilizado em variáveis que seguem uma ordem.
 
 **3.3. Variáveis periódicas**
 
-    Transformação cíclica -> tenta trazer a natureza real da variável com aspecto cíclico - dias, semanas, e meses do ano.
+- Transformação cíclica -> tenta trazer a natureza real da variável com aspecto cíclico - dias, semanas, e meses do ano.
 
 **3.4. Feature Selection**
 
-    Para selecionar os atributos utilizados no modelo foi utilizado um método chamado Boruta, que encontra os atributos que carregam informações úteis para predição.
+- Para selecionar os atributos utilizados no modelo foi utilizado um método chamado Boruta, que encontra os atributos que carregam informações úteis para predição.
 
 <p>&nbsp;<p>
 
@@ -123,7 +125,7 @@ Nesta etapa, 4 modelos de machine learning foram testados utilizando [validaçã
 
 <img src='img/models.PNG' img/>
 
-Random Forest e XGBoost tiveram um desempenho parecido. Optamos pelo modelo do XGBoost.
+Random Forest e XGBoost tiveram um desempenho parecido. O modelo escolhido foi o XGBoost.
 
 ## 4.2. Modelo Final com Otimização de Performance
 
@@ -136,7 +138,7 @@ Parâmetros Otimizados:
     max_depth: 5,
     subsample: 0.7,
     colsample_bytree: 0.7,
-    min_child_weight: 8}
+    min_child_weight: 8
 
 Perfomance do Modelo Otimizado:
 
@@ -180,8 +182,8 @@ Nesse projeto, um modelo de machine learning de previsão de vendas foi desenvol
 
 # 8.0 Próximos passos
 
-Utilizar outro método para realizar a otimização de performance do modelo.
-Derivar novas features que tragam informações que melhorem a predição do modelo.
+- Utilizar outro método para realizar a otimização de performance do modelo.
+- Derivar novas features que tragam informações que melhorem a predição do modelo.
 
 # Referências
 
